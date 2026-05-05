@@ -20,5 +20,23 @@ retrieve a record by the email and display all of the information
 retrieve a record by phone number and display all of the information
 
 You will need to create the table yourself. Consider what data types you will
-need to use.
+need to use.  A function to create your table has been started, but you
+will need to finish it with the correct variables and data types
 """
+
+def createTable():
+  file = 'dbase.db'
+  connection = sqlite3.connect(file)
+  cursor = connection.cursor()
+  query = """
+  create table if not exists customers (
+    id integer primary key autoincrement,
+    lastModified timestamp);
+    """
+  cursor.execute(query)
+
+def main():
+  createTable()
+
+if __name__ == "__main__":
+  main()
