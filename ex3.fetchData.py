@@ -20,7 +20,7 @@ result = cursor.fetchall()
 # to see that mess
 # next code block begins here
 #for i in result:
-#    print(i)
+    #print(i)
 # next code block ends here
 
 # You will notice that we had a list of tuples
@@ -46,7 +46,7 @@ result = cursor.fetchall()
 # --Block begins
 #print(f"{'ID':>3} {'Name':20} {'Email':25} {'Customer#':10}")
 #for i in result:
-#    print(f"{i[0]:3} {i[1]:20} {i[2]:25} {i[3]:<10}")
+    #print(f"{i[0]:3} {i[1]:20} {i[2]:25} {i[3]:<10}")
 # --Block ends
 
 # We can also selectively print only those records that match
@@ -54,10 +54,10 @@ result = cursor.fetchall()
 # Uncomment out the following block to search for records
 # that contain names that contain a J
 # --Block begins
-#print(f"{'ID':>3} {'Name':20} {'Email':25} {'Customer#':10}")
-#for i in result:
-#    if "J" in i[1]:
-#        print(f"{i[0]:3} {i[1]:20} {i[2]:25} {i[3]:<10}")
+print(f"{'ID':>3} {'Name':20} {'Email':25} {'Customer#':10}")
+for i in result:
+    if "J" in i[1]:
+        print(f"{i[0]:3} {i[1]:20} {i[2]:25} {i[3]:<10}")
 # --Block ends
 
 # Note: This is an inefficent way to do this. Consider that
